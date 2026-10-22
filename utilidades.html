@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeCastro SPORTS - Utilidades</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/utilidades.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
 </head>
+
 <body>
-    <header class="sitio-header">
+
+    <!-- CABECERA -->
+    <header class="header">
         <div class="logo"><a href="index.html">DECASTRO SPORTS</a></div>
-        <nav class="navegacion-principal">
+        <nav class="menu">
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="utilidades.html" class="active">UTILIDADES</a></li>
+                <li><a href="utilidades.html" class="activo">UTILIDADES</a></li>
                 <li><a href="contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
-        <div id="minicalendario" class="minicalendario">
-            <div class="cal-year" id="cal-year">----</div>
-            <div class="cal-day" id="cal-day">--</div>
-            <div class="cal-month" id="cal-month">---</div>
-        </div>
+        <time id="reloj" class="minicalendario" datetime="2023-10-15" title="Fecha actual">
+            <div class="cal-year">----</div>
+            <div class="cal-day">--</div>
+            <div class="cal-month">---</div>
+        </time>
     </header>
 
-    <main class="contenedor-principal tres-columnas">
-        <!-- Menú Lateral Izquierdo -->
-        <aside class="columna-izquierda">
-            <div class="tarjeta-lateral">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="layout columnas-3">
+
+        <!-- Menú Izquierdo -->
+        <aside>
+            <div class="tarjeta">
                 <h2>Utilidades</h2>
-                <nav class="enlaces-rapidos">
+                <nav class="lista-enlaces">
                     <ul>
                         <li><a href="#imc">Calculadora IMC</a></li>
                         <li><a href="#fcm">Calculadora FCM</a></li>
@@ -39,111 +47,105 @@
             </div>
         </aside>
 
-        <!-- Sección de calculadoras central -->
-        <section class="contenido-centro-utilidades">
+        <section>
             <h1>Utilidades</h1>
-            <p>Cuatro herramientas para socios y familias. Los cálculos se complementan con JavaScript en Entorno Cliente.</p>
+            <p class="texto-destacado">Cuatro herramientas para socios y familias. Los cálculos se complementan con
+                JavaScript.</p>
 
             <div class="grid-calculadoras">
                 <!-- 1. Calculadora IMC -->
-                <article class="tarjeta-calculadora" id="imc">
+                <article class="tarjeta" id="imc">
                     <h3>Calculadora de IMC</h3>
-                    <div class="cuerpo-calculadora">
-                        <div class="campo-formulario">
-                            <label for="peso">Peso (kg)</label>
-                            <input type="number" id="peso" placeholder="Ej. 68" step="0.1">
-                        </div>
-                        <div class="campo-formulario">
-                            <label for="estatura">Estatura (cm)</label>
-                            <input type="number" id="estatura" placeholder="Ej. 172">
-                        </div>
-                        <button type="button" id="btn-imc" class="btn-accion">Calcular IMC</button>
-                        
-                        <div class="bloque-feedback" id="feedback-imc">
-                            Introduce tus datos y pulsa "Calcular IMC".
-                        </div>
-
-                        <ul class="lista-referencia" id="lista-imc">
-                            <li data-rango="infrapeso-severo">&lt;16.00 — Infrapeso (delgadez severa)</li>
-                            <li data-rango="infrapeso-moderado">16.00–16.99 — Infrapeso (delgadez moderada)</li>
-                            <li data-rango="infrapeso-aceptable">17.00–18.49 — Infrapeso (delgadez aceptable)</li>
-                            <li data-rango="normal">18.50–24.99 — Peso normal</li>
-                            <li data-rango="sobrepeso">25.00–29.99 — Sobrepeso</li>
-                            <li data-rango="obeso-1">30.00–34.99 — Obeso (Tipo I)</li>
-                            <li data-rango="obeso-2">35.00–40.00 — Obeso (Tipo II)</li>
-                            <li data-rango="obeso-3">&gt;40.00 — Obeso (Tipo III)</li>
-                        </ul>
+                    <div class="campo-formulario">
+                        <label for="peso">Peso (kg)</label>
+                        <input type="number" id="peso" placeholder="Ej. 68" step="0.1">
                     </div>
+                    <div class="campo-formulario">
+                        <label for="estatura">Estatura (cm)</label>
+                        <input type="number" id="estatura" placeholder="Ej. 172">
+                    </div>
+                    <button type="button" id="btn-imc" class="btn">Calcular IMC</button>
+
+                    <div class="bloque-feedback" id="feedback-imc">
+                        Introduce tus datos y pulsa "Calcular IMC".
+                    </div>
+
+                    <ul class="lista-referencia" id="lista-imc">
+                        <li data-rango="infrapeso-severo">&lt;16.00 — Infrapeso (delgadez severa)</li>
+                        <li data-rango="infrapeso-moderado">16.00–16.99 — Infrapeso (delgadez moderada)</li>
+                        <li data-rango="infrapeso-aceptable">17.00–18.49 — Infrapeso (delgadez aceptable)</li>
+                        <li data-rango="normal">18.50–24.99 — Peso normal</li>
+                        <li data-rango="sobrepeso">25.00–29.99 — Sobrepeso</li>
+                        <li data-rango="obeso-1">30.00–34.99 — Obeso (Tipo I)</li>
+                        <li data-rango="obeso-2">35.00–40.00 — Obeso (Tipo II)</li>
+                        <li data-rango="obeso-3">&gt;40.00 — Obeso (Tipo III)</li>
+                    </ul>
                 </article>
 
                 <!-- 2. Calculadora FCM -->
-                <article class="tarjeta-calculadora" id="fcm">
+                <article class="tarjeta" id="fcm">
                     <h3>Frecuencia Cardíaca Máxima</h3>
-                    <div class="cuerpo-calculadora">
-                        <div class="campo-formulario">
-                            <label for="edad">Edad</label>
-                            <input type="number" id="edad" placeholder="Ej. 16">
-                        </div>
-                        <div class="campo-formulario">
-                            <label for="sexo">Sexo</label>
-                            <select id="sexo">
-                                <option value="mujer">Mujer</option>
-                                <option value="hombre">Hombre</option>
-                            </select>
-                        </div>
-                        <button type="button" id="btn-fcm" class="btn-accion">Calcular FCM</button>
-
-                        <div class="bloque-feedback" id="feedback-fcm">
-                            Introduce tus datos y pulsa "Calcular FCM".
-                        </div>
-
-                        <ul class="lista-referencia" id="lista-fcm">
-                            <li data-zona="recuperacion">Zona de recuperación (60%–70%)</li>
-                            <li data-zona="aerobica">Zona aeróbica (70%–80%)</li>
-                            <li data-zona="anaerobica">Zona anaeróbica (80%–90%)</li>
-                            <li data-zona="roja">Línea roja (90%–100%)</li>
-                        </ul>
+                    <div class="campo-formulario">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" placeholder="Ej. 16">
                     </div>
+                    <div class="campo-formulario">
+                        <label for="sexo">Sexo</label>
+                        <select id="sexo">
+                            <option value="mujer">Mujer</option>
+                            <option value="hombre">Hombre</option>
+                        </select>
+                    </div>
+                    <button type="button" id="btn-fcm" class="btn">Calcular FCM</button>
+
+                    <div class="bloque-feedback" id="feedback-fcm">
+                        Introduce tus datos y pulsa "Calcular FCM".
+                    </div>
+
+                    <ul class="lista-referencia" id="lista-fcm">
+                        <li data-zona="recuperacion">Zona de recuperación (60%–70%)</li>
+                        <li data-zona="aerobica">Zona aeróbica (70%–80%)</li>
+                        <li data-zona="anaerobica">Zona anaeróbica (80%–90%)</li>
+                        <li data-zona="roja">Línea roja (90%–100%)</li>
+                    </ul>
                 </article>
 
-                <!-- 3. Categoría por edad -->
-                <article class="tarjeta-calculadora" id="categoria">
+                <!-- Categoría -->
+                <article class="tarjeta" id="categoria">
                     <h3>Categoría por edad</h3>
-                    <div class="cuerpo-calculadora">
-                        <div class="campo-formulario">
-                            <label for="anio-nacimiento">Año de nacimiento</label>
-                            <input type="number" id="anio-nacimiento" placeholder="Ej. 2014">
-                        </div>
-                        <button type="button" id="btn-categoria" class="btn-accion">Calcular categoría</button>
-
-                        <div class="bloque-feedback" id="feedback-categoria">
-                            Introduce el año de nacimiento y pulsa "Calcular categoría".
-                        </div>
-
-                        <ul class="lista-referencia" id="lista-categorias">
-                            <li data-cat="benjamin">Benjamín (8–10 años)</li>
-                            <li data-cat="alevin">Alevín (11–12 años)</li>
-                            <li data-cat="infantil">Infantil (13–14 años)</li>
-                            <li data-cat="cadetes">Cadetes (15–16 años)</li>
-                            <li data-cat="juveniles">Juveniles (17–19 años)</li>
-                            <li data-cat="senior">Senior (20 en adelante)</li>
-                        </ul>
+                    <div class="campo-formulario">
+                        <label for="anio-nacimiento">Año de nacimiento</label>
+                        <input type="number" id="anio-nacimiento" placeholder="Ej. 2014">
                     </div>
+                    <button type="button" id="btn-categoria" class="btn">Calcular categoría</button>
+
+                    <div class="bloque-feedback" id="feedback-categoria">
+                        Introduce el año de nacimiento y pulsa "Calcular categoría".
+                    </div>
+
+                    <ul class="lista-referencia" id="lista-categorias">
+                        <li data-cat="benjamin">Benjamín (8–10 años)</li>
+                        <li data-cat="alevin">Alevín (11–12 años)</li>
+                        <li data-cat="infantil">Infantil (13–14 años)</li>
+                        <li data-cat="cadetes">Cadetes (15–16 años)</li>
+                        <li data-cat="juveniles">Juveniles (17–19 años)</li>
+                        <li data-cat="senior">Senior (20 en adelante)</li>
+                    </ul>
                 </article>
             </div>
 
-            <!-- 4. Horarios generados por JS -->
-            <article class="tarjeta-horario" id="horario">
+            <!-- Horarios -->
+            <article class="tarjeta" id="horario">
                 <h3>Horario de la asociación</h3>
-                <p class="bajada-texto">Las tablas se generan automáticamente con JavaScript en Entorno Cliente.</p>
-                
+                <p class="texto-destacado">Las tablas se generan automáticamente con JavaScript.</p>
+
                 <div class="contenedor-tablas">
-                    <div class="seccion-tabla-horario">
+                    <div>
                         <h4>Mañana (9:00–15:00, lunes a viernes)</h4>
                         <div id="tabla-manana-placeholder"></div>
                     </div>
-                    
-                    <div class="seccion-tabla-horario">
+
+                    <div>
                         <h4>Tarde (16:00–21:00, lunes a domingo)</h4>
                         <div id="tabla-tarde-placeholder"></div>
                     </div>
@@ -151,22 +153,26 @@
             </article>
         </section>
 
-        <!-- Columna Derecha Informativa -->
-        <aside class="columna-derecha">
-            <div class="tarjeta-lateral info-box">
+        <!-- Columna Derecha -->
+        <aside>
+            <div class="tarjeta">
                 <h2>¿Sabías que...?</h2>
-                <p>El IMC no distingue masa muscular de grasa.</p>
-                <p>La FCM es orientativa, no un valor médico exacto.</p>
+                <p class="texto-destacado">El IMC no distingue masa muscular de grasa.</p>
+                <p class="texto-destacado">La FCM es orientativa, no un valor médico exacto.</p>
             </div>
         </aside>
     </main>
 
-    <footer class="sitio-footer">
+    <!-- FOOTER -->
+    <footer class="footer">
         <p>Asociación Deportiva DeCastro SPORTS.</p>
-        <p>Web desarrollada por [Nombre Apellido1 Apellido2]</p>
-        <p><a href="#" id="enlace-aviso-legal">Aviso legal</a></p>
+        <p>Web desarrollada por Jose Gambín</p>
+        <p><a id="enlace-aviso-legal" href="#">Aviso legal</a></p>
     </footer>
 
-    <script src="funciones.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/utilidades.js"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,8 @@
+/*   MENSAJES DE ERROR */
+.error-js {
+    color: #cc0000;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: block; 
+    margin-top: 5px;
+}

@@ -1,0 +1,247 @@
+/* ------------------------------------------------------------
+    VARIABLES (ROOT)
+   ------------------------------------------------------------ */
+/* Guardamos los colores y tamaños de la vista completa de la Web */
+:root {
+    --color-azul: #1b2a4a;
+    --color-azul-claro: #2b5cb3;
+    --color-naranja: #e65c00;
+    --color-naranja-oscuro: #cc5200;
+    --color-fondo: #f4f6f9;
+    --color-borde: #dddddd;
+    --color-texto: #333333;
+    --color-texto-suave: #666666;
+    --color-blanco: #ffffff;
+    --borde-redondeado: 6px;
+    --sombra-caja: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ------------------------------------------------------------
+    RESET
+   ------------------------------------------------------------ */
+/* Borra los márgenes que los navegadores tienen por defecto */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------
+   COMPONENTES REUTILIZABLES
+   ------------------------------------------------------------ */
+/* Aquí juntamos todo lo que es una "caja blanca" para no repetir código */
+.tarjeta, 
+.calculadora, 
+.formulario {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--borde-redondeado);
+    padding: 20px;
+    height: fit-content; /* Para que no se estiren hacia abajo */
+}
+
+/* Título especial para las tarjetas laterales */
+.tarjeta h2 {
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-naranja);
+    padding-bottom: 8px;
+}
+
+/* Listas de enlaces dentro de las tarjetas */
+.lista-enlaces a {
+    display: block;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed var(--color-borde);
+}
+
+/* ------------------------------------------------------------
+   CUERPO DEL DOCUMENTO
+   ------------------------------------------------------------ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+/* Enlaces generales del lateral izquierdo */
+a {
+    color: var(--color-azul-claro);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--color-naranja);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Agrupamos todos los títulos para que se vean igual */
+h1, h2, h3 {
+    color: var(--color-azul);
+    margin-bottom: 15px;
+}
+
+/* ------------------------------------------------------------
+   ESTRUCTURA (LAYOUT)
+   ------------------------------------------------------------ */
+/* Contenedor que centra la página y no deja que se estire demasiado */
+.layout {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 25px;
+}
+
+/* Clases para elegir cuántas columnas queremos */
+.columnas-3 {
+    grid-template-columns: 1fr 2.5fr 1fr; /* Izquierda, Centro ancho, Derecha */
+}
+
+.columnas-2 {
+    grid-template-columns: 2fr 1fr;
+}
+
+/* ------------------------------------------------------------
+   CABECERA Y MENÚ
+   ------------------------------------------------------------ */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-blanco);
+    border-bottom: 2px solid var(--color-azul);
+    padding: 15px 40px;
+    box-shadow: var(--sombra-caja);
+}
+
+.logo {
+    color: var(--color-naranja);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* El menú de navegación */
+.menu ul {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: var(--color-texto-suave);
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+/* Cuando pasas el ratón y estas en la pagina marcada.*/
+.menu a:hover,
+.menu a.activo {
+    color: var(--color-azul-claro);
+    border-bottom: 2px solid var(--color-naranja);
+}
+
+/* ------------------------------------------------------------
+   CALENDARIO
+   ------------------------------------------------------------ */
+.minicalendario {
+    width: 70px;
+    text-align: center;
+    border: 1px solid var(--color-azul);
+    border-radius: var(--borde-redondeado);
+    overflow: hidden;
+    background-color: var(--color-blanco);
+}
+
+.cal-year {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    font-size: 0.7rem;
+    padding: 3px 0;
+}
+
+.cal-day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2px 0;
+}
+
+.cal-month {
+    background-color: #e2e8f0;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 0;
+}
+
+
+.texto-destacado {
+    color: var(--color-texto-suave);
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* Botones unificados */
+.btn {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px;
+    border-radius: var(--borde-redondeado);
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--color-naranja-oscuro);
+}
+
+/* Campos de texto (inputs) */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--borde-redondeado);
+    font-family: inherit;
+    margin-bottom: 15px;
+}
+
+/*  TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid var(--color-borde);
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--color-azul);
+    color: #a0aec0;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.footer a {
+    color: var(--color-blanco);
+    text-decoration: underline;
+}

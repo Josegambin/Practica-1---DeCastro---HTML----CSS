@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------
+   10. PÁGINA DE UTILIDADES
+   ------------------------------------------------------------ */
+/* Rejilla para poner las calculadoras de 2 en 2 */
+.grid-calculadoras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Ajustes para los títulos dentro de las tarjetas */
+.tarjeta h3 {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    padding: 10px;
+    margin: -20px -20px 15px -20px; /* Hace que el título ocupe todo el ancho de la tarjeta */
+    border-radius: var(--borde-redondeado) var(--borde-redondeado) 0 0;
+}
+
+/* Listas de referencia (los rangos de IMC, zonas de FCM, etc.) */
+.lista-referencia {
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+    margin-top: 15px;
+}
+
+.lista-referencia li {
+    padding: 6px;
+    border-bottom: 1px solid var(--color-fondo);
+}
+
+/* La clase que usa tu JS para resaltar la fila activa */
+.fila-resaltada {
+    background-color: #ffe6cc;
+    color: var(--color-naranja);
+    font-weight: bold;
+    border: 1px solid var(--color-naranja);
+    border-radius: 4px;
+}
+
+/* Contenedor para las tablas de horario */
+.contenedor-tablas h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: var(--color-azul-claro);
+}
