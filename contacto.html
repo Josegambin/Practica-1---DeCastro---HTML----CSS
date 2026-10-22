@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeCastro SPORTS - Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="sitio-header">
+        <div class="logo"><a href="index.html">DECASTRO SPORTS</a></div>
+        <nav class="navegacion-principal">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="utilidades.html">UTILIDADES</a></li>
+                <li><a href="contacto.html" class="active">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <div id="minicalendario" class="minicalendario">
+            <div class="cal-year" id="cal-year">----</div>
+            <div class="cal-day" id="cal-day">--</div>
+            <div class="cal-month" id="cal-month">---</div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal tres-columnas">
+        <!-- Columna Izquierda: Dirección -->
+        <aside class="columna-izquierda">
+            <div class="tarjeta-lateral">
+                <h2>Dirección</h2>
+                <p><strong>Polideportivo Municipal</strong></p>
+                <p>Calle del Deporte, 4</p>
+                <p>Horario oficina: 17:00–20:00</p>
+            </div>
+        </aside>
+
+        <!-- Centro: Formulario de contacto integrado con doble validación (HTML5 + JS) -->
+        <section class="contenido-centro">
+            <h1>Contacta con nosotros</h1>
+            <p class="bajada-texto">Resolvemos dudas sobre inscripciones, categorías y horarios.</p>
+            
+            <form id="formulario-contacto" action="#" method="POST" novalidate>
+                <div class="campo-formulario-contacto">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="3">
+                    <span class="error-js" id="err-nombre"></span>
+                </div>
+
+                <div class="campo-formulario-contacto">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="su@correo.com" required>
+                    <span class="error-js" id="err-correo"></span>
+                </div>
+
+                <div class="campo-formulario-contacto">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta" required minlength="10"></textarea>
+                    <span class="error-js" id="err-mensaje"></span>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Columna Derecha: Redes Sociales -->
+        <aside class="columna-derecha">
+            <div class="tarjeta-lateral">
+                <h2>Redes sociales</h2>
+                <nav class="enlaces-redes">
+                    <ul>
+                        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter / X</a></li>
+                        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="sitio-footer">
+        <p>Asociación Deportiva DeCastro SPORTS.</p>
+        <p>Web desarrollada por [Nombre Apellido1 Apellido2]</p>
+        <p><a href="#" id="enlace-aviso-legal">Aviso legal</a></p>
+    </footer>
+
+    <script src="funciones.js"></script>
+</body>
+</html>

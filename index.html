@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeCastro SPORTS - Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Cabecera compartida -->
+    <header class="sitio-header">
+        <div class="logo">
+            <a href="index.html" id="logo-link">DECASTRO SPORTS</a>
+        </div>
+        <nav class="navegacion-principal">
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="utilidades.html">UTILIDADES</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <!-- Widget Mini-calendario cargado por JS -->
+        <div id="minicalendario" class="minicalendario">
+            <div class="cal-year" id="cal-year">----</div>
+            <div class="cal-day" id="cal-day">--</div>
+            <div class="cal-month" id="cal-month">---</div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal dos-columnas">
+        <!-- Contenido Central -->
+        <section class="contenido-centro">
+            <h1>Bienvenidos a DeCastro SPORTS</h1>
+            <p>Somos una asociación deportiva dedicada a fomentar el deporte base en todas sus categorías, desde los más pequeños hasta el equipo sénior. Consulta nuestras herramientas y horarios en la sección Utilidades.</p>
+            <p>Esta página se completará más adelante con JavaScript: el pequeño calendario de la cabecera mostrará la fecha actual, y al cargar la página aparecerá una ventana de bienvenida.</p>
+        </section>
+
+        <!-- Menú de Accesos Rápidos Lateral -->
+        <aside class="columna-lateral">
+            <div class="tarjeta-lateral">
+                <h2>Accesos rápidos</h2>
+                <nav class="enlaces-rapidos">
+                    <ul>
+                        <li><a href="utilidades.html#imc">Calculadora de IMC</a></li>
+                        <li><a href="utilidades.html#fcm">Calculadora de FCM</a></li>
+                        <li><a href="utilidades.html#categoria">Categoría por edad</a></li>
+                        <li><a href="utilidades.html#horario">Horario de la asociación</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Pie de página compartido -->
+    <footer class="sitio-footer">
+        <p>Asociación Deportiva DeCastro SPORTS.</p>
+        <p>Web desarrollada por [Nombre Apellido1 Apellido2]</p>
+        <p><a href="#" id="enlace-aviso-legal">Aviso legal</a> — se abrirá en una ventana sin barras de scroll ni de menú.</p>
+    </footer>
+
+    <script src="funciones.js"></script>
+</body>
+</html>
